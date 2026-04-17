@@ -1,0 +1,15 @@
+{
+  "name": "@bookmark-sync/config",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "tailwindcss": "4.2.2"
+  },
+  "exports": {
+    "./biome": "./biome.json",
+    "./tsconfig.base": "./tsconfig.base.json",
+    "./tailwind/base.css": "./tailwind/base.css",
+    "./tailwind/theme.css": "./tailwind/theme.css"
+  }
+}

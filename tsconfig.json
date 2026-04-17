@@ -1,0 +1,30 @@
+{
+  "extends": "./packages/config/tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "files": [],
+  "references": [
+    {
+      "path": "./apps/web"
+    },
+    {
+      "path": "./apps/extension"
+    },
+    {
+      "path": "./apps/extension/tsconfig.node.json"
+    },
+    {
+      "path": "./packages/convex"
+    },
+    {
+      "path": "./packages/ui"
+    },
+    {
+      "path": "./packages/utils"
+    },
+    {
+      "path": "./convex"
+    }
+  ]
+}

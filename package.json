@@ -1,0 +1,25 @@
+{
+  "name": "at-sync-marks",
+  "private": true,
+  "packageManager": "pnpm@10.32.1",
+  "scripts": {
+    "build": "pnpm run codegen && turbo run build",
+    "codegen": "node ./scripts/convex-codegen.mjs",
+    "convex:dev": "convex dev",
+    "dev": "concurrently -n convex,web,extension -c blue,green,magenta \"pnpm run convex:dev\" \"pnpm --filter @bookmark-sync/web dev\" \"pnpm --filter @bookmark-sync/extension dev\"",
+    "format": "biome check --write --unsafe apps/web/app apps/web/components apps/web/lib apps/web/proxy.ts apps/web/next.config.ts apps/web/package.json apps/web/tsconfig.json apps/extension/src apps/extension/package.json apps/extension/tsconfig.json apps/extension/vite.config.ts apps/extension/postcss.config.js apps/extension/popup.html convex scripts packages/convex packages/ui packages/utils packages/config/package.json packages/config/tsconfig.base.json package.json pnpm-workspace.yaml turbo.json tsconfig.json convex.json .env.example .gitignore README.md biome.json",
+    "lint": "turbo run lint"
+  },
+  "devDependencies": {
+    "@auth/core": "0.37.4",
+    "@biomejs/biome": "2.4.10",
+    "@convex-dev/auth": "0.0.91",
+    "@types/node": "24.7.2",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "concurrently": "9.2.1",
+    "convex": "1.34.1",
+    "turbo": "2.9.3",
+    "typescript": "5.9.3"
+  }
+}

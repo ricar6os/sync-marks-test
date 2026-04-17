@@ -1,0 +1,33 @@
+{
+  "name": "@bookmark-sync/extension",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "pnpm run build:chromium && pnpm run build:firefox",
+    "build:chromium": "BROWSER_TARGET=chromium vite build",
+    "build:firefox": "BROWSER_TARGET=firefox vite build --mode firefox",
+    "dev": "BROWSER_TARGET=chromium vite build --watch --mode development",
+    "lint": "biome check ."
+  },
+  "dependencies": {
+    "@bookmark-sync/config": "workspace:*",
+    "@bookmark-sync/convex": "workspace:*",
+    "@bookmark-sync/ui": "workspace:*",
+    "@bookmark-sync/utils": "workspace:*",
+    "@tailwindcss/postcss": "4.2.2",
+    "@vitejs/plugin-react": "6.0.1",
+    "convex": "1.34.1",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "tailwindcss": "4.2.2",
+    "vite": "8.0.3",
+    "webextension-polyfill": "0.12.0"
+  },
+  "devDependencies": {
+    "@types/chrome": "0.1.39",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "@types/webextension-polyfill": "0.12.3"
+  }
+}

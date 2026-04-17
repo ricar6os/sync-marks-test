@@ -1,0 +1,7 @@
+{
+  "extends": "../../packages/config/tsconfig.base.json",
+  "compilerOptions": {
+    "types": ["chrome", "vite/client", "webextension-polyfill"]
+  },
+  "include": ["popup.html", "src/**/*.ts", "src/**/*.tsx", "vite.config.ts"]
+}

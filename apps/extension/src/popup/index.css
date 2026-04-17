@@ -1,0 +1,9 @@
+@import "@bookmark-sync/config/tailwind/base.css";
+
+@source "../popup";
+@source "../lib";
+@source "../../../packages/ui/src";
+
+body {
+  min-width: 24rem;
+}

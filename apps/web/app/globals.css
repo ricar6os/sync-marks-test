@@ -1,0 +1,6 @@
+@import "@bookmark-sync/config/tailwind/base.css";
+
+@source "./";
+@source "../components";
+@source "../lib";
+@source "../../../packages/ui/src";
